@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(211, 211, 211, 0.145);
+}
+
+.forForm{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px;
+}
+
+form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    padding-bottom: 80px;
+    border-radius: 10px;
+}
+form label{
+    font-size: 14px;
+}
+form > .row:first-child h1 {
+    font-weight: 700;
+    padding-bottom: 30px;
+
+}
+form > .row:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+form > .row:nth-child(2) > a{
+    text-decoration: none;
+    color: black;
+} 
+form > .row:nth-child(2) a button{
+    background-color: white;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+form > .row:nth-child(2) a button i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+}
+form > .row:nth-child(2) .row:nth-child(3){
+    display: flex;
+    align-items: center;
+    color: lightgray;
+    justify-content: space-between;
+}
+form > .row:nth-child(2) .row:nth-child(3) span{
+    height: 2px;
+    width: 45%;
+    background-color: lightgray;
+}
+
+form > .row:nth-child(2) .row:nth-child(4),form > .row:nth-child(2) .row:nth-child(5),form > .row:nth-child(2) .row:nth-child(6){
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+form > .row:nth-child(2) .row:nth-child(4) input,form > .row:nth-child(2) .row:nth-child(5) input,form > .row:nth-child(2) .row:nth-child(6) input{
+    width: 100%;
+    padding: 5px 10px;
+
+}
+form > .row:nth-child(2) .row:nth-child(6) p{
+    font-size: 13px;
+}
+form > .row:nth-child(2) > button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 7px;
+}
+form p:last-child a{
+    color: black;
+}
+.forForm .col{
+    width: 70%;
+    /* height: 100vh; */
+    padding: 380px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
+    background-position: center;
+}
+/* @media (max-width:1024px) {
+    .forForm .col {
+        width: 70%;
+    }
+} */
+
+@media (max-width:770px) {
+    form{
+        width: 100%;
+    }
+    .forForm .col {
+        width: 100%;
+    }
+}
