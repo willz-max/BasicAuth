@@ -7,7 +7,7 @@ load_dotenv()
 def main():
     """Main entry point for Django operation. Loads environment variables and sets up application from set configurations."""
 
-    os.environ.get('DJANGO_DEPLOY_MODULE', 'config.deployment')
+    os.environ.get('DJANGO_SETTINGS_MODULE', 'config.deployment')
 
     try:
         from django.core.management import execute_from_command_line
