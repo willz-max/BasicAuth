@@ -2,7 +2,8 @@ import os
 from functools import lru_cache
 from typing import List
 from dotenv import load_dotenv
-from backend.config.settings.base import BaseConfig
+from .base import BaseConfig
+
 
 load_dotenv()
 
@@ -13,9 +14,9 @@ class DevelopmentConfig(BaseConfig):
         super().__init__()
 
         self._debug= True
-        self._allowed_hosts= os.environ.get('DJANGO_ALLOWED_HOSTS').split(',')
+        self._allowed_hosts= os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
         self._cors_allow_all_origins= True
-        self._root_urlconf= 'backend.config.urls'
+        self._root_urlconf= 'config.urls'
 
     @property
     def debug(self)-> bool:
