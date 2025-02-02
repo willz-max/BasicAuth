@@ -10,20 +10,23 @@ body{
 
 .forForm{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 10px;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
 }
 
 form{
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     padding: 30px;
     background-color: white;
     padding-bottom: 80px;
     border-radius: 10px;
+    box-shadow: 9px 5px rgba(34, 33, 33, 0.014);
 }
 form label{
     font-size: 14px;
@@ -52,6 +55,11 @@ form > .row:nth-child(2) a button{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    transition: .25s;
+}
+form > .row:nth-child(2) a button:hover{
+    color: white;
+    background-color: black;
 }
 form > .row:nth-child(2) a button i{
     display: inline-flex;
@@ -89,6 +97,11 @@ form > .row:nth-child(2) > button{
     color: white;
     width: 100%;
     padding: 7px;
+    transition: .23s;
+}
+form > .row:nth-child(2) > button:hover{
+    color: black;
+    background-color: white;
 }
 form p:last-child a{
     color: black;
@@ -99,18 +112,50 @@ form p:last-child a{
     padding: 380px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
     background-position: center;
+    border-radius: 15px;
 }
-/* @media (max-width:1024px) {
+/* @media (max-width:746) {
     .forForm .col {
-        width: 70%;
+        width: 70%
     }
 } */
 
+@media (max-width:1125px) {
+    form{
+        width: 30%;
+
+    }
+    .forForm .col {
+        width: 60%;
+      
+    }
+}
+@media (max-width:1014px) {
+    form{
+        width: 35%;
+
+    }
+    .forForm .col {
+        width: 55%;
+      
+    }
+}
+@media (max-width:990px) {
+    form{
+        width: 40%;
+
+    }
+    .forForm .col {
+        width: 50%;
+      
+    }
+}
 @media (max-width:770px) {
     form{
         width: 100%;
     }
     .forForm .col {
         width: 100%;
+        display: none;
     }
 }
