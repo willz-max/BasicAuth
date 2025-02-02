@@ -14,7 +14,7 @@ class DatabaseConfig:
     """Database PostgreSQL configurations."""
     def __init__(self):
         self.pg_user= os.environ.get('DB_USER')
-        self.pg_pswd= os.environ.get('DB_PSWD')
+        self.pg_pswd= os.environ.get('DB_PASSWORD')
         self.pg_host= os.environ.get('DB_HOST')
         self.pg_port= os.environ.get('DB_PORT')
         self.pg_db= os.environ.get('DB_NAME')
@@ -25,7 +25,7 @@ class DatabaseConfig:
     def _validate_environ()->None:
         required=[
             'DB_USER',
-            'DB_PSWD',
+            'DB_PASSWORD',
             'DB_HOST',
             'DB_PORT',
             'DB_NAME',
