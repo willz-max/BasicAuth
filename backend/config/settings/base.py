@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 from functools import lru_cache
 from dotenv import load_dotenv
-from backend.config.settings.database import postgresql_config
+from .database import postgresql_config
 #from backend.config.settings.cache import redis_cache_config
 #from backend.config.settings.session import redis_session_config
 
@@ -67,8 +67,8 @@ class BaseConfig:
         """List of deployed middleware. CAUTION: Order of arrangement is critical!"""
         default=[
             'django.middleware.security.SecurityMiddleware',
-            'django.middleware.csrf.CsrfViewMiddleware',
             'django.middleware.common.CommonMiddleware',
+            'django.middleware.csrf.CsrfViewMiddleware',
         ]
         custom=[] # custom middleware here
         return default + custom
