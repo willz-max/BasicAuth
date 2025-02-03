@@ -56,10 +56,15 @@ form > .row:nth-child(2) a button{
     align-items: center;
     gap: 5px;
     transition: .25s;
+    cursor: pointer;
 }
 form > .row:nth-child(2) a button:hover{
     color: white;
     background-color: black;
+}
+form > .row:nth-child(2) a button:active{
+    color: white;
+    background-color: rgb(0, 0, 0);
 }
 form > .row:nth-child(2) a button i{
     display: inline-flex;
@@ -98,10 +103,16 @@ form > .row:nth-child(2) > button{
     width: 100%;
     padding: 7px;
     transition: .23s;
+    cursor: pointer;
+    border-radius: 5px;
 }
 form > .row:nth-child(2) > button:hover{
     color: black;
     background-color: white;
+}
+form > .row:nth-child(2) > button:active{
+    /* color: rgb(59, 59, 59); */
+    background-color: rgb(237, 235, 235);
 }
 form p:last-child a{
     color: black;
@@ -109,7 +120,7 @@ form p:last-child a{
 .forForm .col{
     width: 70%;
     /* height: 100vh; */
-    padding: 380px 0;
+    padding: 300px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
     background-position: center;
     border-radius: 15px;
@@ -158,4 +169,55 @@ form p:last-child a{
         width: 100%;
         display: none;
     }
+}
+header{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 10px 40px;
+}
+header > div{
+    width: 10%;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+header > div div{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    background-color: skyblue;
+    border-radius: 20px;
+    /* left: 0; */
+    color: goldenrod;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark{
+    background-color: rgb(17, 17, 17);
+    color: white;
+
+}
+.darkForm{
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border: 1px solid rgb(143, 136, 136);
+}
+.change{
+    right: 0!important;
+    background-color: rgb(30, 27, 27);
+    color: white;
+}
+
+header i{
+    font-size: 30px;
+}
+
+.hide{
+    display: none;
 }
