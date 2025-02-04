@@ -8,11 +8,11 @@ from secrets import token_bytes
 @dataclass(frozen=True)
 class Argon2Config:
     """Immutable configuration for Argon2 hashing."""
-    time_cost: int=3                # Number of iterations
-    memory_cost: int=63556          # 64 MB memory usage (KiB)
-    parallelism: int=4              # Number of parallel threads
-    salt_len: int=16                # Salt length
-    algorithm_type: Type=Type.ID    # Argon2 algorithm variant
+    time_cost: int=3                # Number of iterations (increase to 5 for more security against brute-force attacks)
+    memory_cost: int=63556          # 64 MB memory usage (KiB) (increase from 64 to 128Mib for more security against GPU/ASIC based attacks)
+    parallelism: int=4              # Number of parallel threads (reduce to 2 on single-core systems)
+    salt_len: int=16                # Salt length (recommended)
+    algorithm_type: Type=Type.ID    # Argon2 algorithm variant (recommended)
 
     @property
     def hasher(self)-> PasswordHasher:

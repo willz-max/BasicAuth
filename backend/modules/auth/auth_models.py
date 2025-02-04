@@ -7,7 +7,7 @@ class ClientUser(Base):
 
     first_name= Column(String(40), nullable=False)
     last_name= Column(String(40), nullable=False)
-    email= Column(String(100), nullable=False)
+    email= Column(String(100), unique=True, nullable=False)
     password_hash= Column(String(255), nullable=False)
 
     def _validate_data(self):
