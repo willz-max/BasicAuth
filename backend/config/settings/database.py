@@ -3,12 +3,11 @@ from functools import lru_cache
 from typing import Dict, List, Any
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-#from backend.applications.base import BaseModel
 from dotenv import load_dotenv
-
+from modules.shared.base_model import BaseModel
 
 load_dotenv()
-Base= declarative_base()
+Base= declarative_base(cls=BaseModel)
 
 class DatabaseConfig:
     """Database PostgreSQL configurations."""
