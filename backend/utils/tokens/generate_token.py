@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Dict, get_type_hints, Any, Type
+from typing import Dict, Any, Type
 import jwt
 import datetime
 import os
