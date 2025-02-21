@@ -52,9 +52,6 @@ config= get_dev_config()
 # EXPORTS
 # ==========
 
-#SECRET_KEY= config.secret_key
-#DATABASES= config.databases
-
 DEBUG= config.debug
 ALLOWED_HOSTS= config.allowed_hosts
 CORS_ALLOW_ALL_ORIGINS= config.cors_allow_all_origins

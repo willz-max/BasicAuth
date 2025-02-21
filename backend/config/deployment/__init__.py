@@ -10,12 +10,12 @@ _env= os.environ.get('DJANGO_ENV').lower()
 print('Deploying environment...')
 
 if _env== 'development':
-    from config.settings.development import *
-    ALLOWED_HOSTS=ALLOWED_HOSTS
+    from backend.config.settings.development import *
+    ALLOWED_HOSTS= ALLOWED_HOSTS
     ROOT_URLCONF= ROOT_URLCONF
     print('Development environment deployed successfully!')
 elif _env== 'production':
-    from config.settings.production import *
+    from backend.config.settings.production import *
     print('Production environment deployed successfully!')
 else:
     raise ValueError(
