@@ -222,3 +222,15 @@ header i{
 .hide{
     display: none;
 }
+@media (max-width:425px) {
+    .modeToggler{
+        width: 26%;
+        height: 35px;
+    }
+}
+@media (max-width:375px) {
+    .modeToggler{
+        width: 35%;
+        height: 35px;
+    }
+}

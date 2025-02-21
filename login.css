@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 10px 40px;
+}
+header > div{
+    width: 10%;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    cursor: pointer;
+}
+header > div div{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    background-color: skyblue;
+    border-radius: 20px;
+    /* left: 0; */
+    color: goldenrod;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark{
+    background-color: rgb(17, 17, 17);
+    color: white;
+
+}
+.darkForm{
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border: 1px solid rgb(143, 136, 136);
+}
+.change{
+    right: 0!important;
+    background-color: rgb(30, 27, 27);
+    color: white;
+}
+
+header i{
+    font-size: 30px;
+}
+
+.hide{
+    display: none;
+}
+
+.hero{
+    /* width: 70%; */
+    /* height: 100vh; */
+    padding: 300px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
+    background-position: center;
+    border-radius: 15px;
+}
+line{
+    max-height: 1px !important;
+  
+}
+
+.dark{
+    background-color: rgb(17, 17, 17);
+    color: white;
+
+}
+.darkForm{
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border: 1px solid rgb(143, 136, 136);
+}
+.change{
+    right: 0!important;
+    background-color: rgb(30, 27, 27);
+    color: white;
+}
+
+header i{
+    font-size: 30px;
+}
+
+
+
+@media (max-width:425px) {
+    .modeToggler{
+        width: 26%;
+        height: 35px;
+    }
+}
+@media (max-width:375px) {
+    .modeToggler{
+        width: 35%;
+        height: 35px;
+    }
+}

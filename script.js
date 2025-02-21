@@ -9,7 +9,7 @@ const moon = document.querySelector('.moon');
 
 
 
-console.log(modeTog);
+
 
 
 modes.addEventListener('click',()=>{

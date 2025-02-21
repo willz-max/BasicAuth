@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-</head>
-<body>
-    <section>
-        <div class="row">
-            <div class="col bg-primary">me</div>
-            <div class="col">you</div>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <header>
+      <div class="modeToggler">
+        <div>
+          <i class="sunny"><ion-icon name="sunny"></ion-icon></i>
+          <i class="moon hide"><ion-icon name="moon"></ion-icon></i>
         </div>
+      </div>
+    </header>
+    <section class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-6 d-none d-md-block bg-primary h-50 px-4 hero"></div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+            <form action="" class="w-60 bg-light py-4 px-4 row rounded mx-auto border border-1 border-dark">
+              <h2 class="mb-3">Untitled UI</h2>
+              <h2 class="mb-3">log in</h2>
+              <a href="" class="w-100 my-2"><button class="btn btn-dark text-light w-100"><i><ion-icon name="logo-google"></ion-icon></i> login with Google</button></button></a>
+              <div class="row w-100 my-4">
+                <div class="col-5 line"><hr></div>
+                <div class="col-2 text-center">or</div>
+                <div class="col-5 line"><hr></div>
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Email</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Please enter email">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">password</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="please enter password">
+              </div>
+              <p class="mb-3">Don't have an account? <a class="text-decoration-none" href="index.html">sign up</a></p>
+              <button class=" btn btn-dark my-4" type="submit">log in</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="login.js"></script>
+  </body>
 </html>
