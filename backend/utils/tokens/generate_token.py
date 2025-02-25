@@ -8,6 +8,7 @@ from functools import lru_cache
 
 load_dotenv()
 
+@dataclass(frozen=True)
 class PayloadModel:
     """Custom interface for payload structure."""
     def __init__(self, **kwargs):
