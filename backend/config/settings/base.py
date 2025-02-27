@@ -50,11 +50,13 @@ class BaseConfig:
     def installed_apps(self)-> List[str]:
         """List of installed apps defining third party and project specific applications."""
         third_party=[
-            'corsheaders',
-            'django_redis',
-            'celery',
+            #'corsheaders',
+            #'django_redis',
+            #'celery',
         ]
-        project_apps=[] # custom applications here
+        project_apps=[
+            'core',
+        ] # custom applications here
         return third_party+ project_apps
 
     @property
