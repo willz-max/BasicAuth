@@ -66,16 +66,19 @@ def postgresql_config()-> DatabaseConfig:
     """Cached instance of configurations for faster retrieval."""
     return DatabaseConfig()
 
+_config= postgresql_config()
+_engine= create_engine(_config.postgresql_url)
+
+def get_engine():
+    return _engine
 
 def init_postgresql()-> sessionmaker:
     """Initializes PostgreSQL with set configurations."""
-    config= postgresql_config()
-    engine= create_engine(config.postgresql_url)
-    Base.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=_engine)
     return sessionmaker(
         autoflush=False,
         autocommit=False,
-        bind=engine,
+        bind=_engine,
     )
 
 

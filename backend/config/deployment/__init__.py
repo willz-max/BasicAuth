@@ -3,7 +3,7 @@ import sys
 import os
 from dotenv import load_dotenv
 
-from config.settings.base import SECRET_KEY
+from config.settings.base import SECRET_KEY, INSTALLED_APPS
 from config.settings.development import ROOT_URLCONF, ALLOWED_HOSTS
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -16,6 +16,7 @@ if _env== 'development':
     ALLOWED_HOSTS= ALLOWED_HOSTS
     ROOT_URLCONF= ROOT_URLCONF
     SECRET_KEY= SECRET_KEY
+    INSTALLED_APPS= INSTALLED_APPS
     print('Development environment deployed successfully!')
 elif _env== 'production':
     from config.settings.production import *
