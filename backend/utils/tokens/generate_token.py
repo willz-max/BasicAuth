@@ -22,7 +22,7 @@ class PayloadModel:
 
             value= kwargs[field]
             if not isinstance(value, field_type):
-                raise TypeError(f'Invalid type for {field}: expected {field_type}, got {type(value)}')
+                raise TypeError(f'Invalid type for {field}: expected {field_type.__name__}, got {type(value.__name__)}')
 
             setattr(self, field, value)
 
@@ -119,12 +119,3 @@ def verify_token(token:str)->str:
         return service.de_tokenize(token)
     except Exception as exc:
         raise exc
-
-
-user={
-    'username':456450,
-    'id':456454,
-}
-
-new= generate_token(user)
-print(new)
