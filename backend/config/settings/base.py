@@ -6,8 +6,8 @@ from typing import List, Dict, Any
 from functools import lru_cache
 from dotenv import load_dotenv
 from .database import postgresql_config
-#from backend.config.settings.cache import redis_cache_config
-#from backend.config.settings.session import redis_session_config
+#from config.settings.cache import redis_cache_config
+#from config.settings.session import redis_session_config
 
 
 load_dotenv()
