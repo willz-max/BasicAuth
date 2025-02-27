@@ -4,7 +4,7 @@ from sqlalchemy import Column, DateTime, Integer, func
 
 
 def camel_to_snake(name):
-    return re.sub(r'(?<!^)(?=[A-Z])', '_ ', name).lower()
+    return re.sub(r'(?<!^)(?=[A-Z])', '_', name).lower()
 
 class BaseModel:
     @declared_attr
