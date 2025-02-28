@@ -3,7 +3,7 @@ import logging
 from django.http import JsonResponse
 from config.settings.session_manager import get_db_session
 from modules.auth.auth_models import ClientUser
-from utils.hashing import hash_password
+from utils.hashing.password_hasher import hash_password
 
 logger= logging.getLogger('django')
 
@@ -51,6 +51,7 @@ def register(request):
             first_name=first_name,
             last_name=last_name,
             email=email,
+            password_hash=hash_password(password),
         )
         session.add(newClient)
 
@@ -64,3 +65,11 @@ def register(request):
         return JsonResponse({
             'error':f'An internal error occurred: {str(exc)} Please try again later.'
         }, status=400)
+
+
+print(type(hash_password))  # Should print True
+from utils import hashing
+
+print("hash_password from hashing module:", hasattr(hashing, "hash_password"))  # Should print True
+print("Type of hash_password:", type(hash_password))  # Should print <class 'function'>
+print("Contents of hashing module:", dir(hashing))  # Should list 'hash_password'

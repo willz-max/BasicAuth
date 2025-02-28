@@ -98,3 +98,7 @@ def needs_rehash(hashed:str)-> bool:
     """
     config= get_argon_config()
     return config.hasher.check_needs_rehash(hashed)
+
+
+#test= hash_password('password')
+#print(test)
