@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo,nav i{
+    width: 16px;
+}
+
+@media (max-width:450px) {
+    nav .myForm{
+        width: 100% !important;
+    } 
+}
+.hero > div{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
+    background-position-x: center;
+    border-radius: 15px;
+    height: 80vh;
+}
+.hero > div h1{
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    /* padding: 0 110px; */
+}
+
+@media (max-width: 768px) {
+    .product h3{
+        text-align: center;
+    }
+}
+
+.card_content div:nth-child(3){
+    font-size: 13px;
+}
+
+.card_content div:nth-child(4){
+    font-size: 13px;
+    text-wrap: nowrap;
+}
+.card_veri{
+    height: 60vh !important;
+}
+.card_veri .row .col-md-6 img{
+    height: 50vh !important;
+    object-fit: cover !important;
+} 

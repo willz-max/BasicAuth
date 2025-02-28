@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-md-5">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="#">SHELIA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarSupportedContent"
+        >
+          <form class="d-flex w-75 myForm" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="What are you looking for?"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i><ion-icon name="cart-outline"></ion-icon></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i><ion-icon name="heart-outline"></ion-icon></i
+              ></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img class="logo" src="img/usa.png" alt="" /> English
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span
+                  class="bg-dark rounded-circle text-center border text-light border-3 border-dark"
+                  >JD</span
+                >
+                john doe
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i><ion-icon name="person-circle-outline"></ion-icon></i>
+                    Profile</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class=""><ion-icon name="log-in-outline"></ion-icon></i>
+                    Log Out</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section class="hero my-4">
+      <div class="container rounded">
+        <div class="row">
+          <div class="col-md-8 py-5 px-4">
+            <h1 class="text-light ms-md-5">
+              Simple Is <br />
+              More
+            </h1>
+          </div>
+          <div class="col-md-4 col-4-lg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- category section -->
+    <section class="category py-5 my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3 class="mb-3">Shop by Category</h3>
+          </div>
+          <div class="col-md-9">
+            <div class="row g-4">
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                  ><i class="text-primary"><ion-icon name="body"></ion-icon></i>
+                  personal care</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                  ><i class="text-primary"
+                    ><ion-icon name="watch"></ion-icon
+                  ></i>
+                  Accessory</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                  ><i class="text-primary"><i class="bi bi-badge-sd"></i> </i>
+                  Coats</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                >
+                  <i class="bi bi-activity text-primary"></i> Sweat Pants</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                  ><i class="bi bi-align-bottom text-primary"></i> Perfumes</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-dark fw-bold text-capitalize w-100"
+                  ><i class="text-primary"
+                    ><ion-icon name="shirt"></ion-icon
+                  ></i>
+                  T-Shrit</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-primary fw-bold text-capitalize w-100"
+                  >Sneaker</a
+                >
+              </div>
+              <div class="col-12 col-md-3">
+                <a
+                  href=""
+                  class="btn btn-light border border-1 border-primary fw-bold text-capitalize w-100"
+                >
+                  <i class="text-primary"
+                    ><ion-icon name="bag-handle"></ion-icon> </i
+                  >bags</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-2">
+            <a href="" class="text-decoration-none">see more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- product display section -->
+    <section class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="mb-3 mx-auto text-capitalize">New Arrival</h3>
+          </div>
+          <div class="col-md-6 d-md-block d-none"></div>
+          <div class="col-md-2 mx-auto">
+            <a href="" class="text-decoration-none">see more</a>
+          </div>
+        </div>
+        <!-- card -->
+        <!-- <div class="card-group">
+        <div class="card me-2">
+          <img src="img/model_1_bg.jpg.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6"><h5 class="card-title ps-auto fw-bold text-end">$40.00</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p class="card-title ps-auto fw-bold">Gucci Gown</p></div>
+              <div class="col-6"><a class="text-decoration-none text-end" href="#">stock available</a></div>
+            </div>
+
+          </div>
+        </div>
+        <div class="card me-2">
+          <img src="img/model_2_bg.jpg.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6"><h5 class="card-title ps-auto fw-bold text-end">$40.00</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p class="card-title ps-auto fw-bold">Gucci Gown</p></div>
+              <div class="col-6"><a class="text-decoration-none text-end" href="#">stock available</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card me-2">
+          <img src="img/model_3_bg.jpg.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6"><h5 class="card-title ps-auto fw-bold text-end">$40.00</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p class="card-title ps-auto fw-bold">Gucci Gown</p></div>
+              <div class="col-6"><a class="text-decoration-none text-end" href="#">stock available</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card me-2">
+          <img src="img/model_4_bg.jpg.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6"><h5 class="card-title ps-auto fw-bold text-end">$40.00</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p class="card-title ps-auto fw-bold">Gucci Gown</p></div>
+              <div class="col-6"><a class="text-decoration-none text-end" href="#">stock available</a></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+        <!-- <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <div class="row card_content">
+                  <div class="col-8">
+
+                  </div>
+                  <div class="col ">
+                    <h6 class="w-100 ms-auto">$40</h6>
+                  </div>
+                  <div class="col-8"><p >classic stripped shirt</p></div>
+                  <div class="col-4"><a class="text-decoration-none text-end card_link" href="#">stock available</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row g-3">
+          <div class="col-lg-3 card">
+            <div class="container-fluid mb-2">
+              <img
+                src="img/model_1_bg.jpg.webp"
+                class="card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="row">
+              <div class="col"><h5 class="text-end me-2">$40</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="fw-bold text-start ms-2">white chnel vr</p>
+              </div>
+              <div class="col">
+                <p class="text-primary text-end me-2">stock available</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 card">
+            <div class="container-fluid mb-2">
+              <img
+                src="img/model_2_bg.jpg.webp"
+                class="card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="row">
+              <div class="col"><h5 class="text-end me-2">$40</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="fw-bold text-start ms-2">white chnel vr</p>
+              </div>
+              <div class="col">
+                <p class="text-primary text-end me-2">stock available</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 card">
+            <div class="container-fluid mb-2">
+              <img
+                src="img/model_3_bg.jpg.webp"
+                class="card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="row">
+              <div class="col"><h5 class="text-end me-2">$40</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="fw-bold text-start ms-2">white chnel vr</p>
+              </div>
+              <div class="col">
+                <p class="text-primary text-end me-2">stock available</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 card">
+            <div class="container-fluid mb-2">
+              <img
+                src="img/model_4_bg.jpg.webp"
+                class="card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="row">
+              <div class="col"><h5 class="text-end me-2">$40</h5></div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="fw-bold text-start ms-2">white chnel vr</p>
+              </div>
+              <div class="col">
+                <p class="text-primary text-end me-2">stock available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <!-- <div class="card">
+              
+            </div> -->
+            <div class="card mb-3 bg-primary text-light card_veri">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h6 class="mb-4">SHELIA</h6>
+                    <h2 class="card-title mt-2">
+                      Your style exclusively delievered online
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <img
+                    src="img/remove-bg.png"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="col">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="..." class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary"
+                        >Last updated 3 mins ago</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="login.js"></script> -->
+  </body>
+</html>
