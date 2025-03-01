@@ -40,9 +40,9 @@
     text-wrap: nowrap;
 }
 .card_veri{
-    height: 60vh !important;
+    height: 80vh !important;
 }
 .card_veri .row .col-md-6 img{
-    height: 50vh !important;
+    min-height: 50vh !important;
     object-fit: cover !important;
 } 
