@@ -4,15 +4,39 @@
     box-sizing: border-box;
 }
 
-.logo,nav i{
-    width: 16px;
+#into-jumbotron {
+    background: #159957; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #283041,
+      #0f1420
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #283041,
+      #0f1420
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  @media (max-width: 991.98px) {
+    #into-jumbotron .border-right {
+      border: none !important;
+    }
+  }
+
+/* .logo,header i{
+    width: 26px;
+} */
+.bi-cart{
+    font-size: 16px;
+    position: relative;
 }
 
-@media (max-width:450px) {
+/* @media (max-width:450px) {
     nav .myForm{
         width: 100% !important;
     } 
-}
+} */
 .hero > div{
     background-image: linear-gradient(rgba(0, 0, 0, 0.085),rgba(0, 0, 0, 0.101)), url('img/hero_2.jpg.webp');
     background-position-x: center;
@@ -46,3 +70,11 @@
     min-height: 50vh !important;
     object-fit: cover !important;
 } 
+.present-img{
+    width: 67%;
+}
+@media (max-width:793px) {
+    .present-img{
+        width: 100%;
+    }
+}
