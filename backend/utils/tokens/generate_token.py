@@ -1,10 +1,22 @@
-from dataclasses import dataclass
-from typing import Dict, Any, Type
+import logging
+import uuid
 import jwt
 import datetime
 import os
+
+from dataclasses import dataclass
+from typing import Dict, Any, Type
+from django.conf import settings
+from django.template.loader import render_to_string
 from dotenv import load_dotenv
 from functools import lru_cache
+from datetime import datetime, timedelta
+
+from config.settings.session_manager import get_db_session
+from modules.auth.auth_models import ClientUser
+
+
+logger= logging.getLogger('django')
 
 load_dotenv()
 
@@ -104,8 +116,8 @@ def generate_token(payload_user):
     """Generates a JWT token for authenticated user."""
     payload:dict={
         'sub':payload_user,
-        'exp':datetime.datetime.now()+ datetime.timedelta(minutes=15),
-        'iat':datetime.datetime.now()
+        'exp':datetime.now()+ timedelta(minutes=15),
+        'iat':datetime.now()
     }
     try:
         _valid_payload= PayloadInterface.validate(payload)
@@ -119,3 +131,51 @@ def verify_token(token:str)->str:
         return service.de_tokenize(token)
     except Exception as exc:
         raise exc
+
+
+#==============================================
+# MAIL TOKEN GENERATION UTILITIES
+#==============================================
+
+def generate_verification_token(email):
+    """Generates a verification token for email confirmation."""
+    verif_code= str(uuid.uuid4())
+    exp= datetime.now() + timedelta(hours=3)
+
+    # Store verification code in database (maybe a separate table)
+    with get_db_session() as session:
+        user= session.query(ClientUser).filter_by(email=email).first()
+        if user:
+            user.verif_code= verif_code
+            user.exp= exp
+            session.commit()
+
+    return verif_code
+
+
+def send_verification_email(email:str, verif_code:str):
+    """Sends verification email to user."""
+    verif_url= f'{settings.SITE_URL}/auth/verify/{verif_code}'
+    context={
+        'verification_url':verif_url,
+        'exp':12,
+    }
+
+    email_html= render_to_string('email/verify_email.html', context)
+    email_text= render_to_string('email/verify_email.txt', context)
+
+    try:
+        from django.core.mail import send_mail
+        send_mail(
+            subject='Verify Your Email Address',
+            message=email_text,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[email],
+            html_message=email_html,
+            fail_silently=False,
+        )
+        logger.info(f'Verification email sent to {email}')
+        return True
+    except Exception as exc:
+        logger.error(f'Failed to send verification email to {email}: {str(exc)}')
+        return False

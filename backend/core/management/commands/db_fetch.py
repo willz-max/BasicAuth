@@ -27,7 +27,7 @@ class Command(BaseDBCommand):
                             tablefmt='psql'
                         )),
                     else:
-                        self.stdout.write(self.style.NOTICE(f'No records found in {table.name}'))
+                        self.stdout.write(self.style.NOTICE(f'No records found in {table.name}!'))
 
                 except Exception as exc:
                     self.stderr.write(self.style.ERROR(f'Error fetching {table.name}: {str(exc)}'))
